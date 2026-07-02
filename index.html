@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="tabs">
+        <button id="btnLogin">Login</button>
+        <button id="btnCadastro">Inscrever-se</button>
+    </div>
+
+    <div id="login" class="card">
+
+        <h2>Login</h2>
+
+        <input type="email" placeholder="E-mail">
+
+        <input type="password" placeholder="Senha">
+
+        <button>Entrar</button>
+
+    </div>
+
+    <div id="cadastro" class="card escondido">
+
+        <h2>Cadastro</h2>
+
+        <input type="text" placeholder="Nome">
+
+        <input type="email" placeholder="E-mail">
+
+        <input type="password" placeholder="Senha">
+
+        <input type="password" placeholder="Confirmar senha">
+
+        <button>Cadastrar</button>
+
+    </div>
+
+</div>
+
+<script>
+
+const login=document.getElementById("login");
+const cadastro=document.getElementById("cadastro");
+
+document.getElementById("btnLogin").onclick=function(){
+login.classList.remove("escondido");
+cadastro.classList.add("escondido");
+}
+
+document.getElementById("btnCadastro").onclick=function(){
+cadastro.classList.remove("escondido");
+login.classList.add("escondido");
+}
+
+</script>
+
+</body>
+</html>
